@@ -10,12 +10,12 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/adityatresnobudi/restapi/config"
-	"github.com/adityatresnobudi/restapi/docs"
-	"github.com/adityatresnobudi/restapi/internal/domains/transaction/handler"
-	"github.com/adityatresnobudi/restapi/internal/domains/transaction/service"
-	"github.com/adityatresnobudi/restapi/internal/repositories/transaction_repo/transaction_pg"
-	"github.com/adityatresnobudi/restapi/pkg/postgres"
+	"github.com/adityatresnobudi/go-restapi-http/config"
+	"github.com/adityatresnobudi/go-restapi-http/internal/domains/transaction/handler"
+	"github.com/adityatresnobudi/go-restapi-http/internal/domains/transaction/service"
+	"github.com/adityatresnobudi/go-restapi-http/internal/repositories/transaction_repo/transaction_pg"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/postgres"
+	"github.com/adityatresnobudi/go-restapi-http/docs"
 )
 
 type server struct {

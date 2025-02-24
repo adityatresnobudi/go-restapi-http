@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/adityatresnobudi/restapi/pkg/constants"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/constants"
 )
 
 type Config struct {
@@ -31,11 +31,11 @@ func NewConfig() Config {
 			Host: os.Getenv(constants.APIHost),
 		},
 		Postgres: PostgresConfig{
-			Port: os.Getenv(constants.DBPort),
-			Host: os.Getenv(constants.DBHost),
-			User: os.Getenv(constants.DBUser),
+			Port:     os.Getenv(constants.DBPort),
+			Host:     os.Getenv(constants.DBHost),
+			User:     os.Getenv(constants.DBUser),
 			Password: os.Getenv(constants.DBPassword),
-			DBName: os.Getenv(constants.DBName),
+			DBName:   os.Getenv(constants.DBName),
 		},
 	}
 

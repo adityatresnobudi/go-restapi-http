@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/adityatresnobudi/restapi/internal/dto"
-	"github.com/adityatresnobudi/restapi/internal/entity"
-	"github.com/adityatresnobudi/restapi/internal/repositories/transaction_repo"
-	"github.com/adityatresnobudi/restapi/pkg/errors"
-	"github.com/adityatresnobudi/restapi/pkg/internal_http"
+	"github.com/adityatresnobudi/go-restapi-http/internal/dto"
+	"github.com/adityatresnobudi/go-restapi-http/internal/entity"
+	"github.com/adityatresnobudi/go-restapi-http/internal/repositories/transaction_repo"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/errors"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/internal_http"
 	"github.com/google/uuid"
 )
 

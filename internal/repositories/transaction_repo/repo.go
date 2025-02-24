@@ -3,8 +3,8 @@ package transaction_repo
 import (
 	"context"
 
-	"github.com/adityatresnobudi/restapi/internal/entity"
-	"github.com/adityatresnobudi/restapi/pkg/errors"
+	"github.com/adityatresnobudi/go-restapi-http/internal/entity"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/errors"
 	"github.com/google/uuid"
 )
 

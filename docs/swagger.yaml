@@ -1,0 +1,228 @@
+basePath: /
+definitions:
+  CreateTransactionRequest:
+    properties:
+      account_number:
+        example: "233455011"
+        type: string
+      amount:
+        example: 10.3
+        type: number
+      transaction_type:
+        example: credit
+        type: string
+    type: object
+  CreateTransactionResponse:
+    properties:
+      data:
+        $ref: '#/definitions/TransactionResponse'
+      status:
+        example: OK
+        type: string
+      status_code:
+        example: 200
+        type: integer
+    type: object
+  DeleteByIdTransactionResponse:
+    properties:
+      data:
+        $ref: '#/definitions/DeleteTransactionResponse'
+      status:
+        example: OK
+        type: string
+      status_code:
+        example: 200
+        type: integer
+    type: object
+  DeleteTransactionResponse:
+    properties:
+      message:
+        example: data deleted successfully
+        type: string
+    type: object
+  GetAllTransactionsResponse:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/TransactionResponse'
+        type: array
+      status:
+        example: OK
+        type: string
+      status_code:
+        example: 200
+        type: integer
+    type: object
+  GetOneTransactionResponse:
+    properties:
+      data:
+        $ref: '#/definitions/TransactionResponse'
+      status:
+        example: OK
+        type: string
+      status_code:
+        example: 200
+        type: integer
+    type: object
+  TransactionResponse:
+    properties:
+      account_number:
+        example: "233455011"
+        type: string
+      amount:
+        example: 10.3
+        type: number
+      created_at:
+        example: "2025-02-22T15:11:19.25616+07:00"
+        type: string
+      id:
+        example: d470a4f0-cd65-497d-9198-c16bbf670447
+        type: string
+      transaction_type:
+        example: credit
+        type: string
+    type: object
+  UpdateByIdTransactionResponse:
+    properties:
+      data:
+        $ref: '#/definitions/UpdateTransactionResponse'
+      status:
+        example: OK
+        type: string
+      status_code:
+        example: 200
+        type: integer
+    type: object
+  UpdateTransactionRequest:
+    properties:
+      account_number:
+        example: "233455011"
+        type: string
+      amount:
+        example: 10.3
+        type: number
+      transaction_type:
+        example: credit
+        type: string
+    required:
+    - account_number
+    type: object
+  UpdateTransactionResponse:
+    properties:
+      account_number:
+        example: "233455011"
+        type: string
+      amount:
+        example: 10.3
+        type: number
+      id:
+        example: d470a4f0-cd65-497d-9198-c16bbf670447
+        type: string
+      transaction_type:
+        example: credit
+        type: string
+      updated_at:
+        example: "2025-02-22T15:11:19.25616+07:00"
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Transaction API written in Go
+  title: Transaction API
+  version: "1.0"
+paths:
+  /transactions:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+          schema:
+            $ref: '#/definitions/DeleteByIdTransactionResponse'
+      summary: Delete Transaction
+      tags:
+      - transactions
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/GetAllTransactionsResponse'
+      summary: Get All Transactions
+      tags:
+      - transactions
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Request Body
+        in: body
+        name: requestBody
+        required: true
+        schema:
+          $ref: '#/definitions/CreateTransactionRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/CreateTransactionResponse'
+      summary: Create Transaction
+      tags:
+      - transactions
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Request Body
+        in: body
+        name: requestBody
+        required: true
+        schema:
+          $ref: '#/definitions/UpdateTransactionRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/UpdateByIdTransactionResponse'
+      summary: Update Transaction
+      tags:
+      - transactions
+  /transactions/{id}:
+    get:
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/GetOneTransactionResponse'
+      summary: Get One Transaction By ID
+      tags:
+      - transactions
+swagger: "2.0"

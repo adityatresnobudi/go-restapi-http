@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/adityatresnobudi/restapi/config"
-	"github.com/adityatresnobudi/restapi/internal/server"
+	"github.com/adityatresnobudi/go-restapi-http/config"
+	"github.com/adityatresnobudi/go-restapi-http/internal/server"
 	"github.com/joho/godotenv"
 )
 

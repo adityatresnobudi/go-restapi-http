@@ -3,7 +3,7 @@ package entity
 import (
 	"time"
 
-	"github.com/adityatresnobudi/restapi/internal/dto"
+	"github.com/adityatresnobudi/go-restapi-http/internal/dto"
 	"github.com/google/uuid"
 )
 

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/adityatresnobudi/restapi/internal/dto"
+	"github.com/adityatresnobudi/go-restapi-http/internal/dto"
 )
 
 func NewOKStatusCommonBaseResponseDTO() dto.CommonBaseResponseDTO {

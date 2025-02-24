@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/adityatresnobudi/restapi/internal/domains/transaction/service"
-	"github.com/adityatresnobudi/restapi/internal/dto"
-	"github.com/adityatresnobudi/restapi/pkg/errors"
-	"github.com/adityatresnobudi/restapi/pkg/internal_http"
+	"github.com/adityatresnobudi/go-restapi-http/internal/domains/transaction/service"
+	"github.com/adityatresnobudi/go-restapi-http/internal/dto"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/errors"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/internal_http"
 )
 
 type transactionHandler struct {

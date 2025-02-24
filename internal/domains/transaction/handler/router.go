@@ -3,7 +3,7 @@ package handler
 import (
 	"net/http"
 
-	"github.com/adityatresnobudi/restapi/pkg/internal_http"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/internal_http"
 )
 
 func (t *transactionHandler) MapRoutes() {

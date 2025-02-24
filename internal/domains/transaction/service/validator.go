@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/adityatresnobudi/restapi/internal/dto"
-	"github.com/adityatresnobudi/restapi/internal/entity"
-	"github.com/adityatresnobudi/restapi/pkg/errors"
+	"github.com/adityatresnobudi/go-restapi-http/internal/dto"
+	"github.com/adityatresnobudi/go-restapi-http/internal/entity"
+	"github.com/adityatresnobudi/go-restapi-http/pkg/errors"
 )
 
 func (t *transactionServiceIMPL) createValidator(payload dto.CreateTransactionRequestDTO) errors.MessageErr {
